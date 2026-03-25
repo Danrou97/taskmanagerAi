@@ -9,7 +9,7 @@ class Task:
     # Redefinimos la funcion __str__
 
     def __str__(self):
-        status = "✔" if self.comppleted else " "
+        status = "✔" if self.completed else " "
         return f"[{status}] #{self.id}: {self.description}"
     
 
@@ -25,7 +25,7 @@ class TaskManager :
         self._next_id +=1
         print(f"Task has been added: {description} with id: {task.id}") # en el futuro deberian ser logs 
 
-    def list_tareas(self):
+    def list_tasks(self):
         if not self._tasks:
             print("You don't have any pending task ")
 
